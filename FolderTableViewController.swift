@@ -10,6 +10,9 @@ import UIKit
 
 class FolderTableViewController: UITableViewController {
 
+    var parentFolder: SpliceParent?
+    var contents = [SpliceComponent]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +23,8 @@ class FolderTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -29,23 +34,24 @@ class FolderTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return parentFolder!.contents.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cellIdentifier = "SpliceComponentTableViewCell"
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SpliceComponentTableViewCell
 
-        // Configure the cell...
+        SpliceComponentTableViewController.setCellContent(cell, toBeMatchedTo: (parentFolder?.contents[indexPath.row])!)
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

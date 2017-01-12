@@ -11,11 +11,19 @@ import UIKit
 class SpliceComponentTableViewController: UITableViewController {
 
     //MARK: Properties
+    var parentFolder: SpliceParent?
     var classes = [SpliceComponent]()
+    var firstLoad = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleSpliceComponents()
+        if(parentFolder == nil && firstLoad){
+            firstLoad = false
+            loadSampleSpliceComponents()
+        }else if parentFolder != nil{
+            classes = parentFolder!.contents
+        }
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -59,15 +67,19 @@ class SpliceComponentTableViewController: UITableViewController {
         //Fetches the appropriate meal for the data source layout.
         let spliceComponent = classes[indexPath.row]
         
+        SpliceComponentTableViewController.setCellContent(cell, toBeMatchedTo: spliceComponent)
+        
+        return cell
+    }
+    
+    public static func setCellContent(_ cell: SpliceComponentTableViewCell,toBeMatchedTo spliceComponent:SpliceComponent) {
         //set the content of the cell UI fields
         cell.titleLabel.text = spliceComponent.title
         cell.descriptionLabel.text = spliceComponent.description
         cell.associatedSpliceComponent = spliceComponent
         if let parent = spliceComponent as? SpliceParent{
-             cell.contentsLabel.text = "\(parent.components.count) files"
+            cell.contentsLabel.text = "\(parent.contents.count) files"
         }
-        
-        return cell
     }
     
 
@@ -111,19 +123,25 @@ class SpliceComponentTableViewController: UITableViewController {
      //MARK: - Navigation
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let selectedCell = tableView.cellForRow(at: indexPath) as? SpliceComponentTableViewCell{
-           //plainView
-            if(selectedCell.associatedSpliceComponent is SpliceParent){
-                
-            }else{
-                
-            
-            let vcName = "plainView"
-            let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
-                as! ComponentEditViewController
+           
             let selectedComponent = classes[indexPath.row]
-            viewController.component = selectedComponent
-            self.navigationController?.pushViewController(viewController, animated: true)
-        }
+            if let parent = selectedCell.associatedSpliceComponent as? SpliceParent{
+                let vcName = "folderView"
+                let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+                    as! SpliceComponentTableViewController
+                viewController.parentFolder = parent
+                 self.navigationController?.pushViewController(viewController, animated: true)
+            }else{
+                //default is plainView
+                let vcName = "plainView"
+                let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+                    as! ComponentEditViewController
+                viewController.component = selectedComponent
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
+            
+           
+           
         
         }
     }
@@ -132,11 +150,12 @@ class SpliceComponentTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        super.prepare(for: segue, sender: sender)
         switch(segue.identifier ?? ""){
-//        case "AddItem":
-//            print("Adding a new component")
+        case "AddItem":
+            print("Adding a new component")
             
 //        case "plainView":
             //this case is no longer applicable, but it provides a "how-to" on writing a safety net for segues added in the storyboard
+            //(it's not applicable because I am now using navegator to segue)'
 //            print("Called case for plainView in prwepare method")
 //            
 //            guard let spliceComponentViewController = segue.destination as? ComponentEditViewController else {
@@ -170,7 +189,12 @@ class SpliceComponentTableViewController: UITableViewController {
         if let sourceViewController = sender.source as? ComponentEditViewController, let comp = sourceViewController.component {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 // Update an existing meal.
+                //adding it to classes merely adds it to the display
                 classes[selectedIndexPath.row] = comp
+                //since Swift is evidently not pass-by-value, we also have to add it to the parent
+                if parentFolder != nil{
+                    parentFolder?.contents+=[comp]
+                }
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             }
             else{
@@ -181,6 +205,8 @@ class SpliceComponentTableViewController: UITableViewController {
             }
            
         }
+        //when this unwinds back to itself:
+        
     }
  
 

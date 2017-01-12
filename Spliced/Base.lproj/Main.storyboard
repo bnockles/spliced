@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Folder Table View Controller-->
         <scene sceneID="Uu2-rD-vcl">
             <objects>
-                <tableViewController storyboardIdentifier="folderView" id="6Mb-0h-atr" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="folderView2" id="6Mb-0h-atr" customClass="FolderTableViewController" customModule="Spliced" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="n1D-5z-JvX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,18 +25,8 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ExZ-iC-fru" id="03d-FP-8OF">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ml-1O-EGR">
-                                            <rect key="frame" x="8" y="8" width="359" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="folderLabel" destination="6ml-1O-EGR" id="u6G-fL-dUw"/>
                                     <segue destination="6Mb-0h-atr" kind="showDetail" id="PTG-DA-ewM"/>
                                 </connections>
                             </tableViewCell>
@@ -54,7 +44,7 @@
         <!--Splice Component Table View Controller-->
         <scene sceneID="Agz-WU-pRD">
             <objects>
-                <tableViewController id="3Lc-9e-fMy" customClass="SpliceComponentTableViewController" customModule="Spliced" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="folderView" id="3Lc-9e-fMy" customClass="SpliceComponentTableViewController" customModule="Spliced" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bfc-9H-6Nw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

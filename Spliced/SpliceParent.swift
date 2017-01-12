@@ -9,7 +9,15 @@
 import Foundation
 
 class SpliceParent: SpliceComponent{
-        var components = [SpliceComponent]()
     
+    
+    var contents = [SpliceComponent]()
+    
+    override init?(title: String, description: String?) {
+       super.init(title: title, description: description)
+       let sample = SpliceComponent(title: "An Item", description: "This component is in every parent folder. Annoying, right?")!
+       contents += [sample]
+    }
+
 }
 
