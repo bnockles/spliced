@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE28C75D1E21F1F8003286D6 /* FolderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE28C75C1E21F1F8003286D6 /* FolderTableViewController.swift */; };
 		BE38E13C1DDFA7C90026774C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38E13B1DDFA7C90026774C /* AppDelegate.swift */; };
-		BE38E13E1DDFA7C90026774C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38E13D1DDFA7C90026774C /* ViewController.swift */; };
+		BE38E13E1DDFA7C90026774C /* ComponentEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38E13D1DDFA7C90026774C /* ComponentEditViewController.swift */; };
 		BE38E1411DDFA7CD0026774C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE38E13F1DDFA7CD0026774C /* Main.storyboard */; };
 		BE38E1431DDFA7CE0026774C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE38E1421DDFA7CE0026774C /* Assets.xcassets */; };
 		BE38E1461DDFA7CF0026774C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE38E1441DDFA7CF0026774C /* LaunchScreen.storyboard */; };
 		BE38E1511DDFA7D50026774C /* SplicedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38E1501DDFA7D50026774C /* SplicedTests.swift */; };
+		BE38E15C1DDFAD580026774C /* SpliceComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38E15B1DDFAD580026774C /* SpliceComponentTableViewCell.swift */; };
+		BE38E1601DDFB35E0026774C /* SpliceComponentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38E15F1DDFB35E0026774C /* SpliceComponentTableViewController.swift */; };
+		BE38E1621DDFB4010026774C /* SpliceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38E1611DDFB4010026774C /* SpliceComponent.swift */; };
+		BE38E1631DDFB4010026774C /* SpliceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38E1611DDFB4010026774C /* SpliceComponent.swift */; };
+		BE4D51DF1E2483E200FA3B24 /* NewComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4D51DE1E2483E200FA3B24 /* NewComponentViewController.swift */; };
+		BE4D51E11E248CC600FA3B24 /* SpliceParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4D51E01E248CC600FA3B24 /* SpliceParent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE28C75C1E21F1F8003286D6 /* FolderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FolderTableViewController.swift; path = ../FolderTableViewController.swift; sourceTree = "<group>"; };
 		BE38E1381DDFA7C60026774C /* Spliced.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spliced.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE38E13B1DDFA7C90026774C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE38E13D1DDFA7C90026774C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE38E13D1DDFA7C90026774C /* ComponentEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentEditViewController.swift; sourceTree = "<group>"; };
 		BE38E1401DDFA7CD0026774C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE38E1421DDFA7CE0026774C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE38E1451DDFA7CF0026774C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +44,11 @@
 		BE38E14C1DDFA7D50026774C /* SplicedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplicedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE38E1501DDFA7D50026774C /* SplicedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplicedTests.swift; sourceTree = "<group>"; };
 		BE38E1521DDFA7D50026774C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE38E15B1DDFAD580026774C /* SpliceComponentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpliceComponentTableViewCell.swift; sourceTree = "<group>"; };
+		BE38E15F1DDFB35E0026774C /* SpliceComponentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpliceComponentTableViewController.swift; sourceTree = "<group>"; };
+		BE38E1611DDFB4010026774C /* SpliceComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpliceComponent.swift; sourceTree = "<group>"; };
+		BE4D51DE1E2483E200FA3B24 /* NewComponentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewComponentViewController.swift; sourceTree = "<group>"; };
+		BE4D51E01E248CC600FA3B24 /* SpliceParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpliceParent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +90,18 @@
 		BE38E13A1DDFA7C70026774C /* Spliced */ = {
 			isa = PBXGroup;
 			children = (
+				BE28C75C1E21F1F8003286D6 /* FolderTableViewController.swift */,
+				BE38E15F1DDFB35E0026774C /* SpliceComponentTableViewController.swift */,
 				BE38E13B1DDFA7C90026774C /* AppDelegate.swift */,
-				BE38E13D1DDFA7C90026774C /* ViewController.swift */,
+				BE38E13D1DDFA7C90026774C /* ComponentEditViewController.swift */,
 				BE38E13F1DDFA7CD0026774C /* Main.storyboard */,
+				BE4D51DE1E2483E200FA3B24 /* NewComponentViewController.swift */,
+				BE38E15B1DDFAD580026774C /* SpliceComponentTableViewCell.swift */,
 				BE38E1421DDFA7CE0026774C /* Assets.xcassets */,
 				BE38E1441DDFA7CF0026774C /* LaunchScreen.storyboard */,
 				BE38E1471DDFA7CF0026774C /* Info.plist */,
+				BE38E1611DDFB4010026774C /* SpliceComponent.swift */,
+				BE4D51E01E248CC600FA3B24 /* SpliceParent.swift */,
 			);
 			path = Spliced;
 			sourceTree = "<group>";
@@ -199,8 +218,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE38E13E1DDFA7C90026774C /* ViewController.swift in Sources */,
+				BE4D51DF1E2483E200FA3B24 /* NewComponentViewController.swift in Sources */,
+				BE38E13E1DDFA7C90026774C /* ComponentEditViewController.swift in Sources */,
+				BE28C75D1E21F1F8003286D6 /* FolderTableViewController.swift in Sources */,
+				BE38E1601DDFB35E0026774C /* SpliceComponentTableViewController.swift in Sources */,
 				BE38E13C1DDFA7C90026774C /* AppDelegate.swift in Sources */,
+				BE38E1621DDFB4010026774C /* SpliceComponent.swift in Sources */,
+				BE38E15C1DDFAD580026774C /* SpliceComponentTableViewCell.swift in Sources */,
+				BE4D51E11E248CC600FA3B24 /* SpliceParent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE38E1511DDFA7D50026774C /* SplicedTests.swift in Sources */,
+				BE38E1631DDFB4010026774C /* SpliceComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +432,7 @@
 				BE38E1571DDFA7D60026774C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE38E1581DDFA7D60026774C /* Build configuration list for PBXNativeTarget "SplicedTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +441,7 @@
 				BE38E15A1DDFA7D60026774C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
