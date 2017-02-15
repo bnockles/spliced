@@ -20,6 +20,12 @@
 		BE38E1631DDFB4010026774C /* SpliceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38E1611DDFB4010026774C /* SpliceComponent.swift */; };
 		BE4D51DF1E2483E200FA3B24 /* NewComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4D51DE1E2483E200FA3B24 /* NewComponentViewController.swift */; };
 		BE4D51E11E248CC600FA3B24 /* SpliceParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4D51E01E248CC600FA3B24 /* SpliceParent.swift */; };
+		BEA82E441E2F0DDA00455C29 /* sampledb.sql in Resources */ = {isa = PBXBuildFile; fileRef = BEA82E431E2F0DDA00455C29 /* sampledb.sql */; };
+		BEA82E471E2F10A700455C29 /* EditInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA82E461E2F10A700455C29 /* EditInfoViewController.m */; };
+		BEA82E491E2F14F000455C29 /* SampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA82E481E2F14F000455C29 /* SampleTableViewController.swift */; };
+		BED2E7FC1E5392B30074285E /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED2E7FB1E5392B30074285E /* PracticeViewController.swift */; };
+		BEF32E291E2B26FC00AE0C4E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF32E281E2B26FC00AE0C4E /* libsqlite3.tbd */; };
+		BEF32E2D1E2B283500AE0C4E /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF32E2C1E2B283500AE0C4E /* DBManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,15 @@
 		BE38E1611DDFB4010026774C /* SpliceComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpliceComponent.swift; sourceTree = "<group>"; };
 		BE4D51DE1E2483E200FA3B24 /* NewComponentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewComponentViewController.swift; sourceTree = "<group>"; };
 		BE4D51E01E248CC600FA3B24 /* SpliceParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpliceParent.swift; sourceTree = "<group>"; };
+		BEA82E431E2F0DDA00455C29 /* sampledb.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = sampledb.sql; sourceTree = "<group>"; };
+		BEA82E451E2F10A700455C29 /* EditInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInfoViewController.h; sourceTree = "<group>"; };
+		BEA82E461E2F10A700455C29 /* EditInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInfoViewController.m; sourceTree = "<group>"; };
+		BEA82E481E2F14F000455C29 /* SampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTableViewController.swift; sourceTree = "<group>"; };
+		BED2E7FB1E5392B30074285E /* PracticeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
+		BEF32E281E2B26FC00AE0C4E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BEF32E2A1E2B283500AE0C4E /* Spliced-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spliced-Bridging-Header.h"; sourceTree = "<group>"; };
+		BEF32E2B1E2B283500AE0C4E /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		BEF32E2C1E2B283500AE0C4E /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF32E291E2B26FC00AE0C4E /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,9 +88,14 @@
 		BE38E12F1DDFA7BB0026774C = {
 			isa = PBXGroup;
 			children = (
+				BEF32E2B1E2B283500AE0C4E /* DBManager.h */,
+				BEF32E2C1E2B283500AE0C4E /* DBManager.m */,
 				BE38E13A1DDFA7C70026774C /* Spliced */,
 				BE38E14F1DDFA7D50026774C /* SplicedTests */,
 				BE38E1391DDFA7C60026774C /* Products */,
+				BEF32E271E2B26FB00AE0C4E /* Frameworks */,
+				BEF32E2A1E2B283500AE0C4E /* Spliced-Bridging-Header.h */,
+				BEA82E431E2F0DDA00455C29 /* sampledb.sql */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +116,10 @@
 				BE38E13B1DDFA7C90026774C /* AppDelegate.swift */,
 				BE38E13D1DDFA7C90026774C /* ComponentEditViewController.swift */,
 				BE38E13F1DDFA7CD0026774C /* Main.storyboard */,
+				BED2E7FB1E5392B30074285E /* PracticeViewController.swift */,
+				BEA82E481E2F14F000455C29 /* SampleTableViewController.swift */,
+				BEA82E451E2F10A700455C29 /* EditInfoViewController.h */,
+				BEA82E461E2F10A700455C29 /* EditInfoViewController.m */,
 				BE4D51DE1E2483E200FA3B24 /* NewComponentViewController.swift */,
 				BE38E15B1DDFAD580026774C /* SpliceComponentTableViewCell.swift */,
 				BE38E1421DDFA7CE0026774C /* Assets.xcassets */,
@@ -113,6 +138,14 @@
 				BE38E1521DDFA7D50026774C /* Info.plist */,
 			);
 			path = SplicedTests;
+			sourceTree = "<group>";
+		};
+		BEF32E271E2B26FB00AE0C4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEF32E281E2B26FC00AE0C4E /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +198,7 @@
 				TargetAttributes = {
 					BE38E1371DDFA7BE0026774C = {
 						CreatedOnToolsVersion = 8.2;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					BE38E14B1DDFA7D50026774C = {
@@ -200,6 +234,7 @@
 			files = (
 				BE38E1461DDFA7CF0026774C /* LaunchScreen.storyboard in Resources */,
 				BE38E1431DDFA7CE0026774C /* Assets.xcassets in Resources */,
+				BEA82E441E2F0DDA00455C29 /* sampledb.sql in Resources */,
 				BE38E1411DDFA7CD0026774C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,12 +253,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA82E471E2F10A700455C29 /* EditInfoViewController.m in Sources */,
 				BE4D51DF1E2483E200FA3B24 /* NewComponentViewController.swift in Sources */,
 				BE38E13E1DDFA7C90026774C /* ComponentEditViewController.swift in Sources */,
 				BE28C75D1E21F1F8003286D6 /* FolderTableViewController.swift in Sources */,
+				BEF32E2D1E2B283500AE0C4E /* DBManager.m in Sources */,
 				BE38E1601DDFB35E0026774C /* SpliceComponentTableViewController.swift in Sources */,
+				BEA82E491E2F14F000455C29 /* SampleTableViewController.swift in Sources */,
 				BE38E13C1DDFA7C90026774C /* AppDelegate.swift in Sources */,
 				BE38E1621DDFB4010026774C /* SpliceComponent.swift in Sources */,
+				BED2E7FC1E5392B30074285E /* PracticeViewController.swift in Sources */,
 				BE38E15C1DDFAD580026774C /* SpliceComponentTableViewCell.swift in Sources */,
 				BE4D51E11E248CC600FA3B24 /* SpliceParent.swift in Sources */,
 			);
@@ -365,10 +404,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Spliced/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neverbenbetter.Spliced;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spliced-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -377,10 +419,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Spliced/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neverbenbetter.Spliced;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Spliced-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
